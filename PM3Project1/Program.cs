@@ -6,20 +6,12 @@ public class Program
     {
         // WorkWithQuestion();
         // WorkWithFunctionArguments();
-        //WorkWithLoops();
+        // WorkWithLoops();
         // WorkwithEnums();
-
-        float Sum(params float[] numbers)
-        {
-            var res = 0f;
-            foreach (var number in numbers)
-                res += number;
-            return res;
-        }
-
-        var res = Sum(23, 45, 67, 89, 123, 34, 11, 23);
-        Console.WriteLine(res);
+        // WorkWithTuples();
     }
+
+    #region Work with enums
 
     private static void WorkwithEnums()
     {
@@ -105,7 +97,67 @@ public class Program
         // 11 = 1011
 
     }
+    
+    private static int GetGender()
+    {
+        bool gender;
+        do
+        {
+            Console.WriteLine("Укажите свой пол (м / ж)");
+            var strGender = Console.ReadLine();
+            if (strGender == "м")
+                return 1;
 
+            if (strGender == "ж")
+                return 0;
+            
+            Console.WriteLine("Некорректный формат");
+
+        } while (true);
+    }
+    
+    private static Gender GetGender2()
+    {
+        bool gender;
+        do
+        {
+            Console.WriteLine("Укажите свой пол (м / ж)");
+            var strGender = Console.ReadLine();
+            if (strGender == "м")
+                return Gender.Male;
+
+            if (strGender == "ж")
+                return Gender.Female;
+            
+            Console.WriteLine("Некорректный формат");
+
+        } while (true);
+    }
+
+    private static string GetGenderName(Gender gender)
+    {
+        switch (gender)
+        {
+            case Gender.Male:
+                return "мужчина";
+            case Gender.Female:
+                return "женщина";
+            default:
+                return "Неведома зверушка";
+        }
+    }
+
+    private static string GetGenderName2(Gender gender) => gender switch
+    {
+        Gender.Male => "мужчина",
+        Gender.Female => "женщина",
+        _ => "Неведома зверушка",
+    };
+
+    #endregion
+    
+    #region Work with functions
+    
     private static void WorkWithQuestion()
     {
         Console.WriteLine("What is your age?");
@@ -313,63 +365,64 @@ public class Program
         return age;
     }
 
-    private static int GetGender()
-    {
-        bool gender;
-        do
-        {
-            Console.WriteLine("Укажите свой пол (м / ж)");
-            var strGender = Console.ReadLine();
-            if (strGender == "м")
-                return 1;
-
-            if (strGender == "ж")
-                return 0;
-            
-            Console.WriteLine("Некорректный формат");
-
-        } while (true);
-    }
     
-    private static Gender GetGender2()
+
+    #endregion
+    
+    #region Work with tuples
+    /// <summary>
+    /// Функция для экспериментов с кортежами
+    /// </summary>
+    private static void WorkWithTuples()
     {
-        bool gender;
-        do
-        {
-            Console.WriteLine("Укажите свой пол (м / ж)");
-            var strGender = Console.ReadLine();
-            if (strGender == "м")
-                return Gender.Male;
-
-            if (strGender == "ж")
-                return Gender.Female;
-            
-            Console.WriteLine("Некорректный формат");
-
-        } while (true);
+        float[] array = { 3.4f, 2.3f, 12.5f, 10.0f, 6.7f, 8.8f };
+        float valueToSearch = 6.0f;
+        var res = FindClosestItemInArray(array, valueToSearch);
+        Console.WriteLine($"Closest value for {valueToSearch} is {res.Value} with index {res.Index}");
+        
+        valueToSearch = 12.2f;
+        (var value, var index) = FindClosestItemInArray(array, valueToSearch);
+        Console.WriteLine($"Closest value for {valueToSearch} is {value} with index {index}");
+        
+        valueToSearch = 8.2f;
+        var (value2, index2) = FindClosestItemInArray(array, valueToSearch);
+        Console.WriteLine($"Closest value for {valueToSearch} is {value2} with index {index2}");
     }
 
-    private static string GetGenderName(Gender gender)
+    /// <summary>
+    /// Находит ближайший элемент в массиве
+    /// </summary>
+    /// <param name="array">Массив</param>
+    /// <param name="value">Значение для поиска</param>
+    /// <returns>знфчение, индекс</returns>
+    static (float Value, int Index) FindClosestItemInArray(float[] array, float value)
     {
-        switch (gender)
+        var valueToReturn = float.MaxValue;
+        var index = -1;
+        for (var i = 0; i < array.Length; i++)
         {
-            case Gender.Male:
-                return "мужчина";
-            case Gender.Female:
-                return "женщина";
-            default:
-                return "Неведома зверушка";
+            var diff = MathF.Abs(valueToReturn - value);
+            var curDiff = MathF.Abs(array[i] - value);
+            if (curDiff < diff)
+            {
+                index = i;
+                valueToReturn = array[i];
+            }
         }
+
+        return (valueToReturn, index);
     }
+    #endregion
+    
+    #region Work with classes
 
-    private static string GetGenderName2(Gender gender) => gender switch
+    private static void WorkWithClasses()
     {
-        Gender.Male => "мужчина",
-        Gender.Female => "женщина",
-        _ => "Неведома зверушка",
-    };
-
-
+        // создание объекта (new)
+        // new запускает конструктор
+        var person = new Person();
+    }
+    #endregion
 }
 
 public class A
