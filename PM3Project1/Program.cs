@@ -9,6 +9,8 @@ public class Program
         // WorkWithLoops();
         // WorkwithEnums();
         // WorkWithTuples();
+        // WorkWithClasses();
+        WorkWithInheritance();
     }
 
     #region Work with enums
@@ -420,7 +422,115 @@ public class Program
     {
         // создание объекта (new)
         // new запускает конструктор
+        // выделяется память для объекта
         var person = new Person();
+        // var person1 = new Person("Валерий");
+        // var person2 = new Person("Анастасия", "Суша");
+
+        string name3 = person.Name2;
+
+        var (name, surName) = person;
+
+        var (name2, surName2, datOfBirth2) = person;
+
+        var nm = person.Name;
+        // person.Name = "dsadsadsa"; нельзя, т.к. свойства только get
+
+        person.Name6 = "Дарья";
+        person.Name6 = "";
+        Console.WriteLine(person.Name6);
+    }
+    #endregion
+    
+    #region Work with inheritance
+
+    public static void WorkWithInheritance()
+    {
+        // создание с иницициализатором
+        Student student1 = new Student()
+        { // инициализатор
+            Name = "Анастасия",
+            Surname = "Суша",
+            Gender = Gender.Female,
+            Program = "Прикладная математика и информатика",
+            Direction = "Что-то с геймдевом)",
+            Course = 3
+        };
+        
+        var student2 = new Student(); // сохдание. Свойства не инициализирпованы
+        student2.Name = "Дарья"; // отдельно присваиваем каждое свойство
+        student2.Surname = "Зайцева";
+        student2.Gender = Gender.Female;
+        student2.Program = "Прикладная математика и информатика";
+        student2.Direction = "Что-то с геймдевом)";
+        student2.Course = 3;
+
+        var teacher = new Teacher()
+        {
+            Name = "Михаил",
+            Surname = "Верещагин",
+            Gender = Gender.Male,
+            Degree = "PhD",
+            Title = "доцент",
+            Occupation = "директор Высшей школы компьютерных наук и прикладной математики",
+            Comment = "Преподаватель \"Языки семейства С (С++ / С#)\"",
+        };
+
+        Human h1 = student1; // upcasting
+
+        // абстрактный класс нельзя создавать, но от него можно наследоваться
+        // Human human = new()
+        // {
+        //     Name = "Марья",
+        //     Surname = "Ивановна",
+        //     Gender = Gender.Female,
+        // };
+
+        // Student st = human; // нельзя downcastiung
+
+        Student st1 = (Student) h1; // explicit downcasting
+
+        Human[] humans =
+        {
+            student1, student2, teacher,
+            new Student()
+            {
+                Name = "Алан",
+                Surname = "Газиев",
+                Gender = Gender.Male,
+                Program = "Прикладная математика и информатика",
+                Course = 3
+            }
+        };
+        foreach (var h in humans)
+        {
+            if (h is Student) // если h студент
+            {
+                var st3 = h as Student;
+                var program = st3.Program;
+                Console.WriteLine($"{h.Name} {h.Surname} {st3.Direction}");
+            }
+
+            if (h is Student st4) // одновременно is и as
+            {
+                var program = st4.Program;
+                Console.WriteLine($"{h.Name} {h.Surname} {st4.Direction}");
+            }
+        }
+
+        Console.WriteLine("=============================================");
+        foreach (var h in humans)
+        {
+            Console.WriteLine(h);
+        }
+        
+        Console.WriteLine("=============================================");
+        foreach (var h in humans)
+        {
+            Console.WriteLine(h.SayHello());
+        }
+
+        var st5 = new Student();
     }
     #endregion
 }
