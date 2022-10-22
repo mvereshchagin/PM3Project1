@@ -7,14 +7,38 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "PM3Project1/1.0.0": {
+        "dependencies": {
+          "Classes": "1.0.0",
+          "Utils": "1.0.0"
+        },
         "runtime": {
           "PM3Project1.dll": {}
+        }
+      },
+      "Classes/1.0.0": {
+        "runtime": {
+          "Classes.dll": {}
+        }
+      },
+      "Utils/1.0.0": {
+        "runtime": {
+          "Utils.dll": {}
         }
       }
     }
   },
   "libraries": {
     "PM3Project1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Classes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Utils/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

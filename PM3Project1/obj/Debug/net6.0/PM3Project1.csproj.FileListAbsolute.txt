@@ -13,3 +13,8 @@
 /mnt/data/Misha/Projects/csharp/PM3Project1/PM3Project1/obj/Debug/net6.0/PM3Project1.pdb
 /mnt/data/Misha/Projects/csharp/PM3Project1/PM3Project1/obj/Debug/net6.0/PM3Project1.genruntimeconfig.cache
 /mnt/data/Misha/Projects/csharp/PM3Project1/PM3Project1/obj/Debug/net6.0/ref/PM3Project1.dll
+/mnt/data/Misha/Projects/csharp/PM3Project1/PM3Project1/bin/Debug/net6.0/Classes.dll
+/mnt/data/Misha/Projects/csharp/PM3Project1/PM3Project1/bin/Debug/net6.0/Utils.dll
+/mnt/data/Misha/Projects/csharp/PM3Project1/PM3Project1/bin/Debug/net6.0/Classes.pdb
+/mnt/data/Misha/Projects/csharp/PM3Project1/PM3Project1/bin/Debug/net6.0/Utils.pdb
+/mnt/data/Misha/Projects/csharp/PM3Project1/PM3Project1/obj/Debug/net6.0/PM3Project1.csproj.CopyComplete

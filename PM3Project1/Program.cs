@@ -1,4 +1,7 @@
-﻿using PM3Project1;
+﻿using System.Drawing;
+using Classes;
+using PM3Project1;
+using Utils;
 
 public class Program
 {
@@ -10,7 +13,10 @@ public class Program
         // WorkwithEnums();
         // WorkWithTuples();
         // WorkWithClasses();
-        WorkWithInheritance();
+        // WorkWithInheritance();
+        // WorkWithOtherProject();
+        // WorkWithStructures();
+        WorkWithRecords();
     }
 
     #region Work with enums
@@ -531,6 +537,79 @@ public class Program
         }
 
         var st5 = new Student();
+    }
+    #endregion
+    
+    #region Work With Other Project
+
+    public static void WorkWithOtherProject()
+    {
+        MyClass myClass = new();
+        Console.WriteLine(myClass);
+
+        ConsoleUtils.ReadString();
+        ConsoleUtils.ReadInt();
+    }
+    #endregion
+    
+    #region Work With structures
+
+    public static void WorkWithStructures()
+    {
+        Point3d point = new() { X = 100, Y = 100, Z = 100 };
+        Console.WriteLine(point);
+        ShiftPoint(point: point, x: 20, y: 30, z: 40);
+        Console.WriteLine(point);
+    }
+
+    public static void ShiftPoint(Point3d point, int x = 0, int y = 0, int z = 0)
+    {
+        point.X += x;
+        point.Y += y;
+        point.Z += z;
+    }
+    #endregion
+    
+    #region Work with records
+
+    public static void WorkWithRecords()
+    {
+        Car lada = new Car(Producer: "Lada", Model: "Sedan", Year: 2000, Color: "Baklazhan", Price: 2000000);
+        // car.Price = 100; // нельзя
+        Console.WriteLine(lada.Price);
+        Console.WriteLine(lada);
+        
+        Car ladaCopy = new Car(Producer: "Lada", Model: "Sedan", Year: 2000, Color: "Baklazhan", Price: 2000000);
+        Console.WriteLine(lada == ladaCopy); // Сравниваем по своствам.
+                                             // Если все свойства одинкаовы, то считается, что это одини тот же объект
+        
+        Car bmw = new Car(Producer: "BMW", Model: "X6", Year: 2000, Color: "Green", Price: 6000000);
+        if (lada == bmw)
+        {
+            Console.WriteLine("Different cars");
+        }
+
+        // lada2 копирует все свойства lada кроме цвета
+        Car lada2 = lada with { Color = "Yellow"};
+        
+        CarAnalog ladaAnalog = 
+            new CarAnalog(producer: "Lada", model: "Sedan", year: 2000, color: "Baklazhan", price: 2000000);
+        
+        CarAnalog ladaAnalog2 = 
+            new CarAnalog(producer: "Lada", model: "Sedan", year: 2000, color: "Baklazhan", price: 2000000);
+
+        Console.WriteLine(ladaAnalog == ladaAnalog2); // Сравниваются ссылки, а не поля
+
+        var (producer, model, year, color, price) = lada;
+        
+        
+        var car2 = new Car2(Producer: "Lada", Model: "Sedan", Year: 2000, Color: "Baklazhan", Price: 2000000);
+        car2.Price = 1500000;
+
+        var color1 = new MyRGBA() { Red = 100, Green = 200, Blue = 300, Alpha = 0.5f };
+        color1.Alpha = 0.8f;
+
+        var color2 = color1 with { Alpha = 1.0f };
     }
     #endregion
 }

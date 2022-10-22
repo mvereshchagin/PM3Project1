@@ -1,11 +1,46 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Classes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Classes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Classes.dll": {}
+        }
+      },
+      "Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utils.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Classes/1.0.0": {
+      "type": "project",
+      "path": "../Classes/Classes.csproj",
+      "msbuildProject": "../Classes/Classes.csproj"
+    },
+    "Utils/1.0.0": {
+      "type": "project",
+      "path": "../Utils/Utils.csproj",
+      "msbuildProject": "../Utils/Utils.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Classes >= 1.0.0",
+      "Utils >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/misha/.nuget/packages/": {}
@@ -31,7 +66,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/mnt/data/Misha/Projects/csharp/PM3Project1/Classes/Classes.csproj": {
+              "projectPath": "/mnt/data/Misha/Projects/csharp/PM3Project1/Classes/Classes.csproj"
+            },
+            "/mnt/data/Misha/Projects/csharp/PM3Project1/Utils/Utils.csproj": {
+              "projectPath": "/mnt/data/Misha/Projects/csharp/PM3Project1/Utils/Utils.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
