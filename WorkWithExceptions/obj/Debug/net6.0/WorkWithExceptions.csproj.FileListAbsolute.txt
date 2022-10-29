@@ -1,0 +1,15 @@
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/bin/Debug/net6.0/WorkWithExceptions
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/bin/Debug/net6.0/WorkWithExceptions.deps.json
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/bin/Debug/net6.0/WorkWithExceptions.runtimeconfig.json
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/bin/Debug/net6.0/WorkWithExceptions.dll
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/bin/Debug/net6.0/WorkWithExceptions.pdb
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/obj/Debug/net6.0/WorkWithExceptions.csproj.AssemblyReference.cache
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/obj/Debug/net6.0/WorkWithExceptions.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/obj/Debug/net6.0/WorkWithExceptions.AssemblyInfoInputs.cache
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/obj/Debug/net6.0/WorkWithExceptions.AssemblyInfo.cs
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/obj/Debug/net6.0/WorkWithExceptions.csproj.CoreCompileInputs.cache
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/obj/Debug/net6.0/WorkWithExceptions.dll
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/obj/Debug/net6.0/refint/WorkWithExceptions.dll
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/obj/Debug/net6.0/WorkWithExceptions.pdb
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/obj/Debug/net6.0/WorkWithExceptions.genruntimeconfig.cache
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithExceptions/obj/Debug/net6.0/ref/WorkWithExceptions.dll

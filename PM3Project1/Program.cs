@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using Classes;
 using PM3Project1;
 using Utils;
 
@@ -537,18 +536,6 @@ public class Program
         }
 
         var st5 = new Student();
-    }
-    #endregion
-    
-    #region Work With Other Project
-
-    public static void WorkWithOtherProject()
-    {
-        MyClass myClass = new();
-        Console.WriteLine(myClass);
-
-        ConsoleUtils.ReadString();
-        ConsoleUtils.ReadInt();
     }
     #endregion
     

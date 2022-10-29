@@ -1,0 +1,15 @@
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/bin/Debug/net6.0/WorkWithDelegates
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/bin/Debug/net6.0/WorkWithDelegates.deps.json
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/bin/Debug/net6.0/WorkWithDelegates.runtimeconfig.json
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/bin/Debug/net6.0/WorkWithDelegates.dll
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/bin/Debug/net6.0/WorkWithDelegates.pdb
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/obj/Debug/net6.0/WorkWithDelegates.csproj.AssemblyReference.cache
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/obj/Debug/net6.0/WorkWithDelegates.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/obj/Debug/net6.0/WorkWithDelegates.AssemblyInfoInputs.cache
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/obj/Debug/net6.0/WorkWithDelegates.AssemblyInfo.cs
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/obj/Debug/net6.0/WorkWithDelegates.csproj.CoreCompileInputs.cache
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/obj/Debug/net6.0/WorkWithDelegates.dll
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/obj/Debug/net6.0/refint/WorkWithDelegates.dll
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/obj/Debug/net6.0/WorkWithDelegates.pdb
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/obj/Debug/net6.0/WorkWithDelegates.genruntimeconfig.cache
+/mnt/data/Misha/Projects/csharp/PM3Project1/WorkWithDelegates/obj/Debug/net6.0/ref/WorkWithDelegates.dll

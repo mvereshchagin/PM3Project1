@@ -39,7 +39,7 @@ public abstract class Human : object
     // в классах потомках
     public virtual string SayHello() => $"Привет, {this}"; 
     
-    public abstract int? Payment { get; } // все потоки обязаны реализовать данное свойство
+    public abstract int? Payment { get; } // все потомки обязаны реализовать данное свойство
 
     public abstract bool IsGood();
 
