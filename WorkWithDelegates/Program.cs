@@ -68,13 +68,13 @@ MathUtils.Say(SayBye, "Вася");
 Console.WriteLine("=======================================================");
 bool NamesFilter(string name) => name.Length > 5;
 string[] names = { "Оля", "Инна", "Влада", "Анастасия", "Евгения"};
-var filteredNames = ArrayUtills.Filter<string>(names, NamesFilter);
+var filteredNames = ArrayUtils.Filter<string>(names, NamesFilter);
 foreach(var name in filteredNames)
     Console.WriteLine(name);
 
 Console.WriteLine("=======================================================");
 int[] numbers = { 4, 67, 23, 45, 12, 90, 32, 11, 54};
-var filteredNumbers = ArrayUtills.Filter(numbers, number => number > 30);
+var filteredNumbers = ArrayUtils.Filter(numbers, number => number > 30);
 foreach(var number in filteredNumbers)
     Console.WriteLine(number);
 
@@ -83,13 +83,27 @@ var ii3 = MathUtils.Trapz(x => 1 / x, Math.E, Math.E * Math.E, N: 10000);
 Console.WriteLine(ii3);
 
 
-var broadCaster = new Broadcaster();
-broadCaster.Subscribe((msg) => Console.WriteLine($"Subscriber 1: {msg}"));
-broadCaster.Subscribe((msg) => Console.WriteLine($"Subscriber 2: {msg}"));
-broadCaster.Subscribe((msg) => Console.WriteLine($"Subscriber 3: {msg}"));
-broadCaster.Run();
+// var broadCaster = new Broadcaster2();
+// broadCaster.Subscribe((msg) => Console.WriteLine($"Subscriber 1: {msg}"));
+// broadCaster.Subscribe((msg) => Console.WriteLine($"Subscriber 2: {msg}"));
+// broadCaster.Subscribe((msg) => Console.WriteLine($"Subscriber 3: {msg}"));
+// broadCaster.Run();
 
+// var broadcaster = new Broadcaster3();
+// broadcaster.OnSendMessage += (msg) => Console.WriteLine($"Subscriber 1 {msg}");
+// broadcaster.OnSendMessage += (msg) => Console.WriteLine($"Subscriber 2 {msg}");
+// broadcaster.OnSendMessage += (msg) => Console.WriteLine($"Subscriber 3 {msg}");
+// broadcaster.OnSendMessage += (msg) => Console.WriteLine($"Subscriber 4 {msg}");
+// broadcaster.OnSendMessage += (msg) => Console.WriteLine($"Subscriber 5 {msg}");
+// broadcaster.Run();
 
+var broadcaster = new Broadcaster4();
+broadcaster.OnSendMessage += (sender, args) => Console.WriteLine($"Subscriber 1 {args.Message}");
+broadcaster.OnSendMessage += (sender, args) => Console.WriteLine($"Subscriber 2 {args.Message}");
+broadcaster.OnSendMessage += (sender, args) => Console.WriteLine($"Subscriber 3 {args.Message}");
+broadcaster.OnSendMessage += (sender, args) => Console.WriteLine($"Subscriber 4 {args.Message}");
+broadcaster.OnSendMessage += (sender, args) => Console.WriteLine($"Subscriber 5 {args.Message}");
+broadcaster.Run();
 
 delegate int Method(int a, int b);
 

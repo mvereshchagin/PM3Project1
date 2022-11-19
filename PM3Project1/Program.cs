@@ -1,6 +1,5 @@
 ﻿using System.Drawing;
 using PM3Project1;
-using Utils;
 
 public class Program
 {

@@ -1,6 +1,6 @@
 namespace WorkWithDelegates;
 
-public static class ArrayUtills
+public static class ArrayUtils
 {
     public static T[] Filter<T>(T[] array, Predicate<T> condition)
     {
